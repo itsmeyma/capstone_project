@@ -1,5 +1,4 @@
 plotly
 matplotlib
-matplotlib.pyplot
 plotly.express
 seaborn
