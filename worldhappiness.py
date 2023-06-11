@@ -85,7 +85,7 @@ elif factor_group == 'Perceptions of Corruption':
     st.plotly_chart(fig6)
     st.caption("")
 
-st.markdown(":orange[_Dari hasil analisis, dari setiap factor dapat kita lihat negara mana saja yang menjadi 10 negara tertinggi yang di pengaruhi oleh factor-faktor tersebut. Nyatanya, sebagai negara dengat tingkat kebahagiaan tertinggi, Finland tidak termasuk kedalam 10 negara yang memiliki GDP tertinggi, hanya saja Finland termasuk kedalam 10 negara tertinggi yg dipengaruhi oleh social support dan freedom._]")
+st.markdown(":orange[_Dari hasil analisis, dari setiap faktor dapat kita lihat negara mana saja yang menjadi 10 negara tertinggi yang di pengaruhi oleh faktor-faktor tersebut. Nyatanya, sebagai negara dengat tingkat kebahagiaan tertinggi, Finland tidak termasuk kedalam 10 negara yang memiliki GDP tertinggi, hanya saja Finland termasuk kedalam 10 negara tertinggi yg dipengaruhi oleh social support dan freedom._]")
 
 correlations = df[['gdp_per_capita', 'health_life_expectancy', 'social_support', 'freedom', 'generosity', 'perceptions_of_corruption', 'happiness_score']].corr()
 fig11, ax = plt.subplots(figsize = (6,4))
