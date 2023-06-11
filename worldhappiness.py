@@ -16,7 +16,7 @@ st.markdown("<h1 style = 'text-align : center; color : violet; font_size : 40 px
 image = Image.open('happiness.jpg')
 st.image(image, caption='Happiness')
 
-st.markdown("<h1 style = 'text-align : center; color : white; font_size : 8 px; font-family : Arial'><b>Apa sih yang mempengaruhi tingkat kebahagiaan suatu negara?<b></h1>", unsafe_allow_html= True)
+st.markdown("<h1 style = 'text-align : center; color : violet; font_size : 8 px; font-family : Arial'><b>Apa sih yang mempengaruhi tingkat kebahagiaan suatu negara?<b></h1>", unsafe_allow_html= True)
 st.write(":orange[_Tingkat kebahagiaan suatu negara di pengaruhi oleh 6 faktor, yaitu pendapatan(GDP), kesehatan(health), dukungan social(social support), kebebasan dalam memilih tujuan hidup(freedom to make life decision), kemurahan hati(generosity) dan persepsi atas korupsi(perceptions of corruption). Kira-kira, faktor mana yang paling mempengaruhi tingkat kebahagiaan suatu negara ya?_]")
 df=pd.read_csv("world_happiness1.csv")
 df_sorted = df.sort_values(by='happiness_score', ascending=False)
