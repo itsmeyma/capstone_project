@@ -11,12 +11,20 @@ import seaborn as sns
 
 
 st.set_page_config(layout="wide")
-st.markdown("<h1 style = 'text-align : center; color : violet; font_size : 40 px; font-family : Arial'><b>Hi! Welcome to my Capstone Project<b></h1>", unsafe_allow_html= True)
+st.markdown("<h1 style = 'text-align : center; color : violet; font_size : 40 px; font-family : Arial'><b>Analisis Faktor-Faktor Yang Mempengaruhi Tingkat Kebahagiaan Suatu Negara<b></h1>", unsafe_allow_html= True)
 
 image = Image.open('happiness.jpg')
 st.image(image, caption='Happiness')
+st.write(":blue[_Fun Fact! Tingkat kebahagiaan penduduk memiliki dampak yang signifikan dalam berbagai aspek kehidupan. Beberapa fun fact tentang relevansi antara tingkat kebahagiaan suatu negara dengan impact yang diberikan adalah:_"]
+st.write(":blue[_1. Produktivitas lebih tinggi_"]
+st.write(":blue[_2. Kesehatan yang lebih baik_"]
+st.write(":blue[_3. Hubungan yang lebih positif_"]
+st.write(":blue[_4. Kemajuan Ekonomi_"]
+st.write(":blue[_5. Keberlanjutan dan kualitas hidup_"]
+st.write(":blue[_6. Turis dan migrasi_"]
+st.write(":blue[_Fun fact ini menunjukkan bahwa tingkat kebahagiaan suatu negara memiliki dampak yang luas dan penting dalam berbagai aspek kehidupan. Memperhatikan kebahagiaan penduduk dapat berkontribusi pada pembangunan sosial, ekonomi, dan kualitas hidup yang lebih baik._"]
 
-st.markdown("<h1 style = 'text-align : center; color : violet; font_size : 8 px; font-family : Arial'><b>Apa sih yang mempengaruhi tingkat kebahagiaan suatu negara?<b></h1>", unsafe_allow_html= True)
+st.markdown("<h1 style = 'text-align : center; color : violet; font_size : 8 px; font-family : Arial'><b>Jadi, apa sih yang mempengaruhi tingkat kebahagiaan suatu negara?<b></h1>", unsafe_allow_html= True)
 st.write(":orange[_Tingkat kebahagiaan suatu negara di pengaruhi oleh 6 faktor, yaitu pendapatan(GDP), kesehatan(health), dukungan social(social support), kebebasan dalam memilih tujuan hidup(freedom to make life decision), kemurahan hati(generosity) dan persepsi atas korupsi(perceptions of corruption). Kira-kira, faktor mana yang paling mempengaruhi tingkat kebahagiaan suatu negara ya?_]")
 df=pd.read_csv("world_happiness1.csv")
 df_sorted = df.sort_values(by='happiness_score', ascending=False)
@@ -86,7 +94,7 @@ elif factor_group == 'Perceptions of Corruption':
     st.caption("")
 
 st.markdown(":orange[_Dari hasil analisis, dari setiap faktor dapat kita lihat negara mana saja yang menjadi 10 negara tertinggi yang di pengaruhi oleh faktor-faktor tersebut. Nyatanya, sebagai negara dengat tingkat kebahagiaan tertinggi, Finland tidak termasuk kedalam 10 negara yang memiliki GDP tertinggi, hanya saja Finland termasuk kedalam 10 negara tertinggi yg dipengaruhi oleh social support dan freedom._]")
-
+st.markdown(":orange[_Apakah terdapat korelasi antara faktor-faktor tertentu dengan tingkat kebahagiaan? Faktor apa yang paling mempengaruhi tingkat kebahagiaan?_]
 correlations = df[['gdp_per_capita', 'health_life_expectancy', 'social_support', 'freedom', 'generosity', 'perceptions_of_corruption', 'happiness_score']].corr()
 fig11, ax = plt.subplots(figsize = (6,4))
 sns.heatmap(correlations, annot=True, cmap='coolwarm', cbar=True, ax=ax, fmt=".2g")
@@ -97,8 +105,14 @@ with c1:
     st.pyplot(fig11)
 with c2:
     st.subheader('Hasilnya:')
-    st.markdown(':orange[_Dari hasil korelasi ini menunjukkan bahwa keenam faktor tersebut seperti pendapatan per kapita (gdp), kesehatan (health), kebebasan (freedom), kemurahan hati (generosity), dan persepsi terhadap korupsi (corruption) tetap berperan penting dalam mempengaruhi tingkat kebahagiaan suatu negara. Tetapi, hubungan sosial, solidaritas, dukungan sosial, dan kualitas interaksi sosial memiliki peran yang lebih dominan dalam mempengaruhi tingkat kebahagiaan suatu negara._]')
-
+    st.markdown(':orange[_Dari hasil korelasi ini menunjukkan bahwa keenam faktor tersebut seperti pendapatan per kapita (gdp), kesehatan (health), kebebasan (freedom), kemurahan hati (generosity), dan persepsi terhadap korupsi (corruption) berkolerasi dengan tingkat kebahagiaan, dan faktor-faktor tersebut tetap berperan penting dalam mempengaruhi tingkat kebahagiaan suatu negara. Tetapi, hubungan sosial, solidaritas, dukungan sosial, dan kualitas interaksi sosial memiliki peran yang lebih dominan dalam mempengaruhi tingkat kebahagiaan suatu negara._]')
+st.write(":blue[_Jadi, impact dari tingginya tingkat kebahagiaan atas suatu negara itu apa ya?_"]
+st.write(":blue[_1. Kesejahteraan dan kualitas hidup yang lebih baik._"]
+st.write(":blue[_2. Produktivitas dan inovasi yang meningkat._"]
+st.write(":blue[_3. Kesehatan fisik dan mental masyarakat yang lebih baik._"]
+st.write(":blue[_4. Hubungan sosial yang lebih kuat._"]
+st.write(":blue[_5. Stabilitas sosial dan politik._"]
+st.write(":blue[_6. Daya tarik pariwisata dan investasi._"]
 st.markdown(':orange[_Thank You!!_:smile:]')
 st.caption('source: https://worldhappiness.report/ed/2023/')
 
