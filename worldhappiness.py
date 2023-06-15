@@ -15,7 +15,7 @@ st.markdown("<h1 style = 'text-align : center; color : violet; font_size : 40 px
 
 image = Image.open('happiness.jpg')
 st.image(image, caption='Happiness')
-st.write(":blue[_Fun Fact! Tingkat kebahagiaan penduduk memiliki dampak yang signifikan dalam berbagai aspek kehidupan. Beberapa fun fact tentang relevansi antara tingkat kebahagiaan suatu negara dengan impact yang diberikan adalah:_]")
+st.write(":blue[Fun Fact! Tingkat kebahagiaan penduduk memiliki dampak yang signifikan dalam berbagai aspek kehidupan. Beberapa fun fact tentang relevansi antara tingkat kebahagiaan suatu negara dengan impact yang diberikan adalah:]")
 st.write(":blue[_1. Produktivitas lebih tinggi_]")
 st.write(":blue[_2. Kesehatan yang lebih baik_]")
 st.write(":blue[_3. Hubungan yang lebih positif_]")
@@ -94,7 +94,7 @@ elif factor_group == 'Perceptions of Corruption':
     st.caption("")
 
 st.markdown(":orange[_Dari hasil analisis, dari setiap faktor dapat kita lihat negara mana saja yang menjadi 10 negara tertinggi yang di pengaruhi oleh faktor-faktor tersebut. Nyatanya, sebagai negara dengat tingkat kebahagiaan tertinggi, Finland tidak termasuk kedalam 10 negara yang memiliki GDP tertinggi, hanya saja Finland termasuk kedalam 10 negara tertinggi yg dipengaruhi oleh social support dan freedom._]")
-st.markdown(":orange[_Apakah terdapat korelasi antara faktor-faktor tertentu dengan tingkat kebahagiaan? Faktor apa yang paling mempengaruhi tingkat kebahagiaan?_]")
+st.markdown(":orange[Apakah terdapat korelasi antara faktor-faktor tertentu dengan tingkat kebahagiaan? Faktor apa yang paling mempengaruhi tingkat kebahagiaan?]")
 correlations = df[['gdp_per_capita', 'health_life_expectancy', 'social_support', 'freedom', 'generosity', 'perceptions_of_corruption', 'happiness_score']].corr()
 fig11, ax = plt.subplots(figsize = (6,4))
 sns.heatmap(correlations, annot=True, cmap='coolwarm', cbar=True, ax=ax, fmt=".2g")
@@ -106,14 +106,14 @@ with c1:
 with c2:
     st.subheader('Hasilnya:')
     st.markdown(':orange[_Dari hasil korelasi ini menunjukkan bahwa keenam faktor tersebut seperti pendapatan per kapita (gdp), kesehatan (health), kebebasan (freedom), kemurahan hati (generosity), dan persepsi terhadap korupsi (corruption) berkolerasi dengan tingkat kebahagiaan, dan faktor-faktor tersebut tetap berperan penting dalam mempengaruhi tingkat kebahagiaan suatu negara. Tetapi, hubungan sosial, solidaritas, dukungan sosial, dan kualitas interaksi sosial memiliki peran yang lebih dominan dalam mempengaruhi tingkat kebahagiaan suatu negara._]')
-st.write(":blue[_Berikut ini beberapa rekomendasi untuk meningkatkan tingkat kebahagiaan negara:_]")
+st.write(":blue[Berikut ini beberapa rekomendasi untuk meningkatkan tingkat kebahagiaan negara:]")
 st.write(":blue[_1. Investasi dalam Kualitas Pendidikan: Meningkatkan akses dan kualitas pendidikan dapat memberikan dampak positif pada kebahagiaan masyarakat. Fokus pada pendidikan yang inklusif, relevan, dan berkualitas dapat membantu individu mencapai potensi penuh mereka dan meningkatkan kesejahteraan secara keseluruhan._]")
 st.write(":blue[_2. Perhatian pada Kesejahteraan Mental: Memberikan perhatian yang lebih besar pada kesehatan mental adalah langkah penting untuk meningkatkan kebahagiaan suatu negara. Memperluas akses ke layanan kesehatan mental, mengurangi stigma, dan meningkatkan kesadaran tentang pentingnya kesehatan mental dapat membantu individu merasa lebih bahagia dan seimbang._]")
 st.write(":blue[_3. Penguatan Jaringan Sosial: Membangun dan memperkuat jaringan sosial dapat berdampak positif pada kebahagiaan masyarakat. Inisiatif untuk mempromosikan interaksi sosial yang positif, dukungan sosial, dan solidaritas dapat menciptakan lingkungan sosial yang lebih sehat dan mendukung._]")
 st.write(":blue[_4. Pembangunan Ekonomi yang Inklusif: Meningkatkan kesetaraan ekonomi dan menciptakan peluang kerja yang adil dapat berkontribusi pada kebahagiaan suatu negara. Kebijakan yang mendukung pembangunan ekonomi inklusif, pengurangan kemiskinan, perlindungan tenaga kerja, dan distribusi yang lebih adil dapat meningkatkan kesejahteraan dan kebahagiaan masyarakat._]")
 st.write(":blue[_5. Partisipasi Politik dan Kebebasan: Mendorong partisipasi politik yang inklusif, kebebasan berbicara, dan akses terhadap hak-hak asasi manusia juga dapat mempengaruhi kebahagiaan suatu negara. Masyarakat yang merasa memiliki pengaruh dan otonomi dalam pembuatan keputusan dapat merasa lebih bahagia dan terlibat secara aktif dalam pembangunan negara._]")
 st.write(":blue[_6. Keseimbangan Kerja dan Kehidupan Pribadi: Membangun lingkungan kerja yang seimbang dan mendukung kehidupan pribadi yang sehat dapat meningkatkan kebahagiaan individu. Kebijakan yang mempromosikan fleksibilitas kerja, cuti yang memadai, dan kesetimbangan antara pekerjaan dan kehidupan pribadi dapat membantu masyarakat mencapai keseimbangan yang lebih baik._]")
-st.write(":blue[_Rekomendasi-rekomendasi ini dapat menjadi panduan untuk memperbaiki dan meningkatkan kebahagiaan suatu negara. Namun, setiap negara memiliki konteks dan tantangan yang berbeda, sehingga solusi yang efektif harus disesuaikan dengan kondisi masing-masing negara.]")
+st.write(":blue[_Rekomendasi-rekomendasi ini dapat menjadi panduan untuk memperbaiki dan meningkatkan kebahagiaan suatu negara. Namun, setiap negara memiliki konteks dan tantangan yang berbeda, sehingga solusi yang efektif harus disesuaikan dengan kondisi masing-masing negara._]")
 st.markdown(':orange[_Thank You!!_:smile:]')
 st.caption('source: https://worldhappiness.report/ed/2023/')
 
